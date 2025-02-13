@@ -2,7 +2,8 @@ import streamlit as st
 from transformers import MarianMTModel, MarianTokenizer
 import speech_recognition as sr
 from gtts import gTTS
-from playsound import playsound
+from pydub import AudioSegment
+from pydub.playback import play
 import os
 import uuid
 
@@ -41,6 +42,7 @@ def speech_to_text(language_code):
             return "No speech detected. Please try again."
 
 # Text-to-Speech function using gTTS
+
 def text_to_speech(text, lang):
     # Create a placeholder to show "Speaking..." message
     speaking_status = st.empty()
@@ -50,9 +52,14 @@ def text_to_speech(text, lang):
     temp_filename = f"tts_output_{uuid.uuid4().hex}.mp3"
     tts = gTTS(text=text, lang=lang)
     tts.save(temp_filename)
-    playsound(temp_filename)
-    os.remove(temp_filename)
 
+    # Play audio using pydub
+    audio = AudioSegment.from_file(temp_filename, format="mp3")
+    play(audio)
+
+    # Remove the file after playback
+    os.remove(temp_filename)
+    
     # Clear the placeholder message after speaking
     speaking_status.empty()
 
