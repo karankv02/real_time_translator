@@ -63,7 +63,9 @@ Copy code
 streamlit run app.py
 Then open the local URL shown in your terminal (usually http://localhost:8501).
 
-🧠 How It Works
+```
+
+##🧠 How It Works
 Speech Input (SpeechRecognition): Captures user voice and converts it to text in the selected source language.
 
 Translation (MarianMT Model): Uses pre-trained translation models from Hugging Face (Helsinki-NLP/opus-mt-*) for conversion between languages.
@@ -72,28 +74,7 @@ Text-to-Speech (gTTS): Converts the translated text back into speech.
 
 Streamlit UI: Provides a clean interface to choose input type, source/target languages, and hear the result.
 
-📸 Screenshots
-Add screenshots here after running your app locally.
-
-bash
-Copy code
-/screenshots/
- ├── home_page.png
- ├── text_translation.png
- ├── speech_translation.png
- └── file_upload.png
-🧭 Future Improvements
-Add live translation mode (continuous speech stream).
-
-Implement automatic source language detection.
-
-Support custom fine-tuned translation models.
-
-Add dark mode and UI themes.
-
-Deploy to Streamlit Cloud or Hugging Face Spaces.
-
-👨‍💻 Author
+##👨‍💻 Author
 Karan Vakkalad
 Final Year CSE | Full-Stack Developer | AI & ML Enthusiast
 
@@ -102,7 +83,7 @@ Final Year CSE | Full-Stack Developer | AI & ML Enthusiast
 🪪 License
 This project is licensed under the MIT License.
 
-⭐ Acknowledgements
+##⭐ Acknowledgements
 Streamlit
 
 Hugging Face Transformers
