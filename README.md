@@ -78,11 +78,6 @@ Streamlit UI: Provides a clean interface to choose input type, source/target lan
 Karan Vakkalad
 Final Year CSE | Full-Stack Developer | AI & ML Enthusiast
 
-📫 LinkedIn • GitHub
-
-🪪 License
-This project is licensed under the MIT License.
-
 ## ⭐ Acknowledgements
 Streamlit
 
